@@ -72,6 +72,11 @@ variable "ca_private_key" {
   default     = ""
 }
 
+variable "operators_rook" {
+  description = "Create Rook operator"
+  default = true
+}
+
 variable "operators_update_service" {
   description = "Create CoreOS update operator"
   default = true
