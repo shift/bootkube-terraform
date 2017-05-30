@@ -81,3 +81,8 @@ variable "operators_update_service" {
   description = "Create CoreOS update operator"
   default = true
 }
+
+variable "operators_prometheus" {
+  description = "Create Prometheus operator"
+  default = true
+}
