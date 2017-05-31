@@ -87,3 +87,8 @@ variable "operators_prometheus" {
   description = "Create Prometheus operator"
   default = true
 }
+
+variable "operators_elasticsearch" {
+  description = "Create Elasticsearch operator"
+  default = true
+}
