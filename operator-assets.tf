@@ -26,3 +26,12 @@ resource "local_file" "prometheus-operator" {
   content  = "${file("${path.module}/resources/operators/manifests/prometheus-operator.yaml")}"
   filename = "${var.asset_dir}/experimental/manifests/prometheus-operator.yaml"
 }
+
+# Elasticsearch Operator
+resource "local_file" "elasticsearch-operator" {
+  count      = "${var.operators_elasticsearch ? 1 : 0}"
+  depends_on = ["template_dir.manifests"]
+
+  content  = "${file("${path.module}/resources/operators/manifests/elasticsearch-operator.yaml")}"
+  filename = "${var.asset_dir}/experimental/manifests/elasticsearch-operator.yaml"
+}
